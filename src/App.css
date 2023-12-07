@@ -1,0 +1,208 @@
+@import url('https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Playfair+Display:wght@400;500;600&family=Poppins:wght@400;500;600&display=swap');
+
+.underline {
+  background-color: rgb(131, 202, 60);
+  width: 100%;
+  height: 2px;
+}
+
+.nav-style {
+  background: linear-gradient(rgba(0,0,0) 30%, rgba(0,0,0,0) 100%);
+  position: sticky;
+  top: 0;
+  height: 20vh;
+  transition: top 0.5s;
+  z-index: 5;
+}
+
+.nav-item{
+  color: white;
+  transition: 0.3s;
+}
+
+.nav-item:hover {
+  color: rgb(131, 202, 60);
+}
+
+.list-style {
+  text-decoration: none;
+  height: fit-content;
+  margin: auto;
+  font-size: 1.32rem;
+  font-weight: 700;
+  position: relative;
+}
+
+.list-style::after {
+  content: "";
+  position: absolute;
+  bottom: 0.1vh;
+  width: 0%;
+  height: 3px;
+  left: 50%;
+  background: rgb(131, 202, 60);
+  transform: translateX(-50%);
+  transition: .3s;
+}
+
+.list-style:hover::after {
+  width: 85%;
+}
+
+.footbar-small {
+  color: rgb(211, 211, 211);
+  transition: .3s;
+  font-size: 1.1rem;
+}
+
+.footbar-small:hover {
+  color: rgb(180, 180, 180);
+}
+
+.footbar-big {
+  color: rgb(235, 235, 235);
+  transition: .3s;
+  font-size: 1.3rem;
+}
+
+.footbar-big:hover {
+  color: rgb(200, 200, 200);
+}
+
+.footbar-underline {
+  background-color: rgb(180, 180, 180);
+  width: 100%;
+  height: 1.5px;
+}
+
+.footbar-text {
+  color: rgb(200, 200, 200);
+  font-size: 0.8rem;
+  text-align: center;
+}
+
+.carousel-img {
+  align-items: center;
+  height: 80vh;
+  width: auto;
+  margin: auto;
+}
+
+.carousel-style {
+  background-color: rgb(0, 0, 0);
+  overflow: hidden;
+}
+
+.moving-text {
+  position: relative;
+  font-family: "Alfa Slab One", serif;
+  font-size: 20vh;
+  color: rgba(131, 202, 60, 0.5);
+  width: 210%;
+  margin: 0%;
+  user-select: none;
+}
+
+.anim-right {
+  animation: text-move-right 40s linear infinite;
+}
+
+.anim-left {
+  animation: text-move-left 40s linear infinite;
+}
+
+.start-img {
+  position: fixed;
+  top: -30%;
+  z-index: -2;
+  width: 100%;
+  height: auto;
+}
+
+.start-text {
+  position: fixed;
+  z-index: 0;
+  top: 20%;
+  left: 2%;
+  user-select: none;
+  color: white;
+  font-family: "Alfa Slab One", serif;
+  font-size: 10vh;
+}
+
+.start-content {
+  height: 65vh;
+}
+
+.start-info {
+  height: 70vh;
+  width: auto;
+  position: relative;
+  background-size: 40%;
+  background-repeat: no-repeat;
+}
+
+.start-info::after {
+  content:""; 
+  position: absolute; 
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;  
+}
+
+.image-left {
+  background-image: url("../public/images/RailingSquare1.jpg");
+  background-position: left;
+}
+
+.image-left::after {
+  background: linear-gradient(to right, rgba(0,0,0,0) 10%,rgb(20, 20, 20) 40%);
+  z-index: 2;
+}
+
+.image-right {
+  background-image: url("../public/images/TableBottle.jpg");
+  background-position: right;
+}
+
+.image-right::after {
+  background: linear-gradient(to left, rgba(0,0,0,0) 10%,rgb(20, 20, 20) 40%);
+  z-index: 2;
+}
+
+.title {
+  background-color: rgba(131, 202, 60, 0.5);
+  text-align: center;
+}
+
+.title span {
+  font-family: "Alfa Slab One", serif;
+  font-size: 6vh;
+  color: rgb(218, 217, 217);
+}
+
+.text-explain {
+  margin: 0;
+  padding: 5%;
+  text-align: justify;
+  color: rgb(238, 238, 238);
+}
+
+@keyframes text-move-left {
+  0% {
+    left: 0%;
+  }
+  100% {
+    left: -107.6%;
+  }
+}
+
+@keyframes text-move-right{
+  0% {
+    left: -107.6%;
+  }
+  100% {
+    left: 0%;
+  }
+}
